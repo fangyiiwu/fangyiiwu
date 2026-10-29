@@ -32,8 +32,9 @@ Grounded in quantitative cost-structure logic and hands-on enterprise automation
 
   * **Enterprise Security & Governance:** Enforced Google Sheet ACL permission lists for role-based access control (RBAC), capturing detailed execution parameters and timestamps for a complete audit trail.
 
-```
-graph TD
+
+```mermaid
+flowchart TD
     A[User via AppSheet Interface] -->|Input Parameters & Trigger| B[(Google Sheet DB + Audit Log)]
     B -->|Sheet Write Event| C[AppSheet Automation]
     C -->|Webhook Call| D[Google Apps Script - GAS]
@@ -53,13 +54,13 @@ graph TD
 
   * **AI Log Pre-Parsing:** Automated the extraction of raw execution logs (last 10 entries) and fed them into LLMs to immediately highlight error locations, drastically reducing engineer debugging fatigue.
 
-```
-graph LR
-    A[RPA Job Failure in Orchestrator] -->|Real-Time Webhook| B[GAS doPost WebApp Endpoint]
-    B -->|Fetch Last 10 Logs| C[UiPath Orchestrator API]
-    C -->|Raw Log Context| D[Gemini AI Analysis Engine]
-    D -->|Parsed Error Summary + Deep Links| E[Personalized Google Chat Notification]
-    D -->|Log Entry| F[(Centralized Error Tracking Sheet)]
+```mermaid
+flowchart TD
+    A[User via AppSheet Interface] -->|Input Parameters & Trigger| B[(Google Sheet DB + Audit Log)]
+    B -->|Sheet Write Event| C[AppSheet Automation]
+    C -->|Webhook Call| D[Google Apps Script - GAS]
+    D -->|OAuth / API Request| E[UiPath Orchestrator API]
+    E -->|Start Job| F[Unattended RPA Robot Execution]
 ```
 
 ### 4. 📊 [Air-Gapped VBA Macro Automation](https://github.com/fangyiiwu/RPA-side-project/tree/main/VBA)
