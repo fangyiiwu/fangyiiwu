@@ -54,13 +54,31 @@ flowchart TD
 
   * **AI Log Pre-Parsing:** Automated the extraction of raw execution logs (last 10 entries) and fed them into LLMs to immediately highlight error locations, drastically reducing engineer debugging fatigue.
 
+#### As-Is — Delayed alert, fragmented follow-up
+
+```mermaid
+flowchart LR
+    JOB[UiPath job fails] --> EMAIL[Orchestrator email notification]
+    EMAIL -->|May be delayed| ENGINEER[Engineer investigates]
+    ENGINEER --> CHAT[Resolution shared in chat]
+    CHAT --> MANAGER[Manager gathers updates manually]
+```
+
+#### To-Be — Routed alert, shared record, faster investigation start
+
 ```mermaid
 flowchart TD
-    A[User via AppSheet Interface] -->|Input Parameters & Trigger| B[(Google Sheet DB + Audit Log)]
-    B -->|Sheet Write Event| C[AppSheet Automation]
-    C -->|Webhook Call| D[Google Apps Script - GAS]
-    D -->|OAuth / API Request| E[UiPath Orchestrator API]
-    E -->|Start Job| F[Unattended RPA Robot Execution]
+    JOB[UiPath job or schedule event] --> WEBHOOK[Orchestrator webhook]
+    WEBHOOK --> GAS[Google Apps Script web app]
+    GAS --> QUEUE[Queue event for background processing]
+    QUEUE --> MAP[Match process to maintainer]
+    MAP --> SHEET[Write incident to assigned engineer's report]
+    MAP --> CHAT[Send Google Chat alert with personalized links]
+    CHAT --> ENGINEER[Engineer opens report and Orchestrator context]
+    SHEET --> FOLLOWUP[Record investigation and resolution]
+    CHAT -. Optional AI triage .-> GEMINI[Gemini summarizes traceback and recent logs]
+    GEMINI --> ENGINEER
+    FOLLOWUP --> SHARED[Centralized incident history for team follow-up]
 ```
 
 ### 4. 📊 [Air-Gapped VBA Macro Automation](https://github.com/fangyiiwu/RPA-side-project/tree/main/VBA)
