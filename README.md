@@ -62,7 +62,7 @@ graph LR
     D -->|Log Entry| F[(Centralized Error Tracking Sheet)]
 ```
 
-### 4. 📊 Air-Gapped VBA Macro Automation
+### 4. 📊 [Air-Gapped VBA Macro Automation](https://github.com/fangyiiwu/RPA-side-project/tree/main/VBA)
 
 > **Agile Solution Engineering under Severe Resource Constraints**
 
