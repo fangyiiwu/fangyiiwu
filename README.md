@@ -81,15 +81,20 @@ flowchart TD
     FOLLOWUP --> SHARED[Centralized incident history for team follow-up]
 ```
 
-### 4. 📊 [Air-Gapped VBA Macro Automation](https://github.com/fangyiiwu/RPA-side-project/tree/main/VBA)
+### 4. 📊 [Air-Gapped VBA Macro Automation](https://github.com/fangyiiwu/RPA-side-project/tree/main/VBA) (Offline Innovation)
+> **Agile Solution Engineering under Severe Resource Constraints & Air-Gapped Environment**
 
-> **Agile Solution Engineering under Severe Resource Constraints**
+- **Context & Problem:** 
+  - Designed during military service to streamline the management and tracking of conscripts to prevent camp-related incidents.
+  - **The Bottleneck:** Raw data collected from Google Forms had to be manually re-formatted, copied, wrapped, and edited cell-by-cell according to strict defense compliance formats—extremely time-consuming and prone to human error in batch processing.
 
-* **Problem:** Operational bottlenecks in strict, offline/air-gapped environments with zero access to external cloud APIs or modern IDEs.
+- **Solution Architecture & Hybrid Logic:**
+  - **Formula + VBA Separation of Concerns:** To maximize maintainability and extensibility, business logic and vocabulary mapping were built directly into **Excel Formulas** (allowing non-technical users to modify rules easily), while **VBA Macros** handled repetitive data consolidation and multi-step sheet operations.
+  - **User-Centric Macro Workflow:** Engineered a structured workflow with dedicated UI buttons (e.g., *「完成temp」*, *「temp貼至final」*, *「清除temp和final產出」*) located in a dedicated control sheet, enabling operators to execute complex multi-stage data pipelines sequentially with zero friction.
 
-* **Solution:** Proactively engineered custom Excel VBA macro templates with user-friendly UI buttons and add-ins within 2 weeks.
-
-* **Impact:** Reduced manual report formatting and data cleansing cycle time by **85%**.
+- **Business Value & Impact:**
+  - Streamlined raw Google Form responses into standardized compliance tables instantly, reducing manual report formatting and data cleansing cycle time by **85%**.
+  - Demonstrated a strong "Can-Do" mindset and pragmatism: delivering robust automation solutions even under strict air-gapped constraints without modern external cloud tools.
 
 ## 📬 Connect with Me
 
