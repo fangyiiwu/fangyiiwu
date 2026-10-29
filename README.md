@@ -1,6 +1,6 @@
 # Hi, I'm Philip Wu (Fang-Yih Wu) 👋
 
-### AI Automation Project Coordinator | Supply Chain & Process Integration Engineer
+### AI Automation Project Coordinator | Business Integration Engineer
 
 Grounded in quantitative cost-structure logic and hands-on enterprise automation experience, I specialize in bridging business pain points with pragmatic, decoupled tech solutions (Python, Low-Code, APIs, Generative AI).
 
