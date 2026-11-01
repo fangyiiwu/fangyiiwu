@@ -2,99 +2,48 @@
 
 ### AI Automation Project Coordinator | Business Integration Engineer
 
-Grounded in quantitative cost-structure logic and hands-on enterprise automation experience, I specialize in bridging business pain points with pragmatic, decoupled tech solutions (Python, Low-Code, APIs, Generative AI).
+I turn operational pain points into practical automation—connecting business needs, user-friendly workflows, and responsible technology. These case studies focus on the problem, the business value, and my contribution; implementation details and code are intentionally not included.
 
-## 💡 Featured Automation & AI Architecture Showcase
+## Selected business automation case studies
 
-### 1. 🤖 [AI Procurement Auditing & Decision Support](https://github.com/fangyiiwu/ai_assisted_procurement-_review_workflow)
+### 🤖 [AI-Assisted Procurement Review](https://github.com/fangyiiwu/ai_assisted_procurement-_review_workflow)
 
-> **Structured LLM Workflow for Executive-Level Purchase Order Compliance**
+Helped approvers focus on exceptions instead of manually reconciling every purchase-order detail.
 
-* **Problem:** High-value PO reviews required tedious manual compliance checks across complex business logic, creating approval latency for C-suite decisions.
+- **What it does:** Organizes first-pass comparisons between purchase orders and supporting documents into a human-reviewed traffic-light report with cited evidence.
+- **Why it matters:** Gives decision-makers a clearer starting point while keeping the final approval with people.
+- **Evidence:** Used 290 times in its first six months; this indicates adoption, not measured time savings or accuracy improvement.
+- **Tools:** Python · Gemini · Instructor · Pydantic · Google Sheets
 
-* **Solution:** Built a structured Python workflow leveraging **Pydantic** and **Gemini LLM** to extract risk insights, enforce compliance rules, and auto-generate executive decision summaries.
+### 🚀 [Self-Service RPA Job Launcher](https://github.com/fangyiiwu/Self-Service-RPA-Job-Launcher)
 
-* **Impact:** Transformed qualitative unstructured PO data into deterministic approval recommendations for Department Heads and Senior Leadership.
+Let authorized users start an automation when their work is ready—without waiting for an engineer to launch it.
 
-### 2. 🚀 Decoupled Self-Service Automation Launcher (RPA API Portal)
+- **What it does:** Provides a familiar Google Workspace interface to select an approved process, enter permitted inputs, and follow execution status.
+- **Why it matters:** Reduces the handoff between business users and IT; starting work sooner can shorten cycle time, though no reduction has been measured.
+- **Design strength:** Process access and exposed inputs are configuration-led, allowing supported changes without routine code edits.
+- **Tools:** AppSheet · Google Apps Script · Google Sheets · UiPath Orchestrator
 
-> **Zero-Barrier, Decoupled Low-Code Portal for Cross-Site Ad-Hoc & Urgent Operations**
+### ⚡ [Event-Driven RPA Error Alert & Triage Pipeline](https://github.com/fangyiiwu/Event-Driven-Error-Alert-and-Triage-Pipeline)
 
-* **Business Value & Operational Impact:**
+Replaced a fragmented failure-notification handoff with clearer ownership, response tracking, and searchable incident history.
 
-  * **Drastically Reduced Process Cycle Time:** Eliminated schedule latency and IT dependency for ad-hoc runs. Operations teams no longer need to wait for fixed time-based triggers or message engineers to manually launch jobs; they can trigger automation immediately upon data readiness.
+- **What it does:** Routes incidents to maintainers, supports severity and resolution tracking, and optionally provides AI-generated investigation clues.
+- **Why it matters:** Helps engineers investigate with relevant context and makes recurring fixes easier to find and hand over.
+- **Reported impact:** Diagnostics response time decreased by 90%; this is not total incident resolution time, and measurement details are limited.
+- **Tools:** Google Apps Script · UiPath Orchestrator · Google Sheets · Google Chat · Gemini
 
-  * **Removed IT Bottlenecks & Empowered Finance:** Transformed manual back-office triggers into an instant self-service launcher, enabling multi-site finance teams to trigger robots independently for urgent off-hours tasks and late-night month-end closings.
+## Additional project
 
-  * **Eliminated Software License Overhead:** Saved enterprise costs by replacing expensive proprietary attended robot user licenses with a custom, decoupled architecture (AppSheet + GAS + Orchestrator API).
+### 📊 [Air-Gapped Excel/VBA Workflow for 列管 Records](https://github.com/fangyiiwu/RPA-side-project/tree/main/VBA)
 
-  * **Zero Learning Curve:** Kept business users within their familiar Google Workspace environment, driving rapid user adoption without introducing platform fatigue.
+Turned repetitive form-response cleanup into a guided workbook workflow.
 
-  * **Enterprise Security & Governance:** Enforced Google Sheet ACL permission lists for role-based access control (RBAC), capturing detailed execution parameters and timestamps for a complete audit trail.
-
-
-```mermaid
-flowchart TD
-    A[User via AppSheet Interface] -->|Input Parameters & Trigger| B[(Google Sheet DB + Audit Log)]
-    B -->|Sheet Write Event| C[AppSheet Automation]
-    C -->|Webhook Call| D[Google Apps Script - GAS]
-    D -->|OAuth / API Request| E[UiPath Orchestrator API]
-    E -->|Start Job| F[Unattended RPA Robot Execution]
-```
-
-### 3. ⚡ Event-Driven AI Diagnostics & Failure Log Analyzer
-
-> **Real-Time Webhook Pipeline with Generative AI Error Diagnostics**
-
-* **Business Value & Operational Impact:**
-
-  * **Bypassed Infrastructure Failures:** Switched from unreliable email notifications to real-time UiPath Orchestrator Webhooks (GAS `doPost` endpoint).
-
-  * **Eliminated Communication Overhead:** Replaced fragmented chat updates with automated Google Sheet tracking, generating personalized deep-links for engineers to submit root-cause reports directly to management.
-
-  * **AI Log Pre-Parsing:** Automated the extraction of raw execution logs (last 10 entries) and fed them into LLMs to immediately highlight error locations, drastically reducing engineer debugging fatigue.
-
-#### As-Is — Delayed alert, fragmented follow-up
-
-```mermaid
-flowchart LR
-    JOB[UiPath job fails] --> EMAIL[Orchestrator email notification]
-    EMAIL -->|May be delayed| ENGINEER[Engineer investigates]
-    ENGINEER --> CHAT[Resolution shared in chat]
-    CHAT --> MANAGER[Manager gathers updates manually]
-```
-
-#### To-Be — Routed alert, shared record, faster investigation start
-
-```mermaid
-flowchart TD
-    JOB[UiPath job or schedule event] --> WEBHOOK[Orchestrator webhook]
-    WEBHOOK --> GAS[Google Apps Script web app]
-    GAS --> QUEUE[Queue event for background processing]
-    QUEUE --> MAP[Match process to maintainer]
-    MAP --> SHEET[Write incident to assigned engineer's report]
-    MAP --> CHAT[Send Google Chat alert with personalized links]
-    CHAT --> ENGINEER[Engineer opens report and Orchestrator context]
-    SHEET --> FOLLOWUP[Record investigation and resolution]
-    CHAT -. Optional AI triage .-> GEMINI[Gemini summarizes traceback and recent logs]
-    GEMINI --> ENGINEER
-    FOLLOWUP --> SHARED[Centralized incident history for team follow-up]
-```
-
-### 4. 📊 [Air-Gapped VBA Macro Automation](https://github.com/fangyiiwu/RPA-side-project/tree/main/VBA) (Offline Innovation)
-> **Agile Solution Engineering under Severe Resource Constraints & Air-Gapped Environment**
-
-- **Context & Problem:** 
-  - Designed during military service to streamline the management and tracking of conscripts to prevent camp-related incidents.
-  - **The Bottleneck:** Raw data collected from Google Forms had to be manually re-formatted, copied, wrapped, and edited cell-by-cell according to strict defense compliance formats—extremely time-consuming and prone to human error in batch processing.
-
-- **Solution Architecture & Hybrid Logic:**
-  - **Formula + VBA Separation of Concerns:** To maximize maintainability and extensibility, business logic and vocabulary mapping were built directly into **Excel Formulas** (allowing non-technical users to modify rules easily), while **VBA Macros** handled repetitive data consolidation and multi-step sheet operations.
-  - **User-Centric Macro Workflow:** Engineered a structured workflow with dedicated UI buttons (e.g., *「完成temp」*, *「temp貼至final」*, *「清除temp和final產出」*) located in a dedicated control sheet, enabling operators to execute complex multi-stage data pipelines sequentially with zero friction.
-
-- **Business Value & Impact:**
-  - Streamlined raw Google Form responses into standardized compliance tables instantly, reducing manual report formatting and data cleansing cycle time by **85%**.
-  - Demonstrated a strong "Can-Do" mindset and pragmatism: delivering robust automation solutions even under strict air-gapped constraints without modern external cloud tools.
+- **What it does:** Uses formulas to map responses and VBA buttons to consolidate and filter a standardized 列管 output.
+- **Why it matters:** Replaces repetitive formatting with a guided workflow built and tested on a workstation without external network access.
+- **Constraint:** AI was consulted verbally on a separate phone; workbook data and code could not be transferred, so I manually typed and tested the VBA offline.
+- **Reported outcome:** Project notes report an 85% reduction in formatting and data-cleaning time; measurement details are not documented.
+- **Tools:** Excel formulas · VBA
 
 ## 📬 Connect with Me
 
