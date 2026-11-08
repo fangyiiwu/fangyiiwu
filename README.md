@@ -35,15 +35,13 @@ Replaced a fragmented failure-notification handoff with clearer ownership, respo
 
 ## Additional project
 
-### 📊 [Air-Gapped Excel/VBA Workflow for 列管 Records](https://github.com/fangyiiwu/RPA-side-project/tree/main/VBA)
+### 📊 [Offline Excel/VBA Workflow for Onboarding & Compliance Records](https://github.com/fangyiiwu/RPA-side-project/tree/main/VBA)
 
 Turned repetitive form-response cleanup into a guided workbook workflow.
-
-- **What it does:** Uses formulas to map responses and VBA buttons to consolidate and filter a standardized 列管 output.
-- **Why it matters:** Replaces repetitive formatting with a guided workflow built and tested on a workstation without external network access.
-- **Constraint:** AI was consulted verbally on a separate phone; workbook data and code could not be transferred, so I manually typed and tested the VBA offline.
-- **Reported outcome:** Project notes report an 85% reduction in formatting and data-cleaning time; measurement details are not documented.
-- **Tools:** Excel formulas · VBA
+* **What it does:** Transforms unstructured form responses into standardized onboarding and compliance tracking records using worksheet formulas and button-driven VBA macros.
+* **Why it matters:** Automates high-volume personnel record compilation in highly restricted, offline operational settings where standard modern cloud tools are unavailable.
+* **Constraint & Adaptability:** Developed and tested strictly offline in a secured, air-gapped environment during mandatory military service, demonstrating strong technical execution and resourcefulness under extreme network constraints.
+* **Tools:** Excel formulas · VBA
 
 ## 📬 Connect with Me
 
