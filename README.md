@@ -10,28 +10,28 @@ I turn operational pain points into practical automation—connecting business n
 
 Helped approvers focus on exceptions instead of manually reconciling every purchase-order detail.
 
-- **What it does:** Organizes first-pass comparisons between purchase orders and supporting documents into a human-reviewed traffic-light report with cited evidence.
-- **Why it matters:** Gives decision-makers a clearer starting point while keeping the final approval with people.
-- **Evidence:** Used 290 times in its first six months; this indicates adoption, not measured time savings or accuracy improvement.
-- **Tools:** Python · Gemini · Instructor · Pydantic · Google Sheets
+* **What it does:** Uses a schema-constrained LLM workflow to compare purchase orders against documents, producing a traffic-light (🟢/🔴) report with citations.
+* **Why it matters:** Directs decision-makers toward exceptions and key judgments instead of manual field-by-field reconciliation.
+* **Design contribution:** Translated requirements into implementation and built a human-governed feedback loop to convert reviewer notes into reusable prompt guidance.
+* **Tools:** Python · Gemini · Instructor · Pydantic · Google Sheets · Playwright
 
 ### 🚀 [Self-Service RPA Job Launcher](https://github.com/fangyiiwu/Self-Service-RPA-Job-Launcher)
 
 Let authorized users start an automation when their work is ready—without waiting for an engineer to launch it.
 
-- **What it does:** Provides a familiar Google Workspace interface to select an approved process, enter permitted inputs, and follow execution status.
-- **Why it matters:** Reduces the handoff between business users and IT; starting work sooner can shorten cycle time, though no reduction has been measured.
-- **Design strength:** Process access and exposed inputs are configuration-led, allowing supported changes without routine code edits.
-- **Tools:** AppSheet · Google Apps Script · Google Sheets · UiPath Orchestrator
+* **What it does:** Offers a decoupled interface enabling authorized users to request, launch, and monitor approved RPA processes on demand.
+* **Why it matters:** Removes the need for engineering coordination, reducing manual handoffs and wait times.
+* **Design contribution:** Built the conceptual design from scratch, creating a configuration-led model separating process definitions and access controls from the UI.
+* **Tools:** AppSheet · Google Apps Script · Google Sheets · UiPath Orchestrator
 
 ### ⚡ [Event-Driven RPA Error Alert & Triage Pipeline](https://github.com/fangyiiwu/Event-Driven-Error-Alert-and-Triage-Pipeline)
 
 Replaced a fragmented failure-notification handoff with clearer ownership, response tracking, and searchable incident history.
 
-- **What it does:** Routes incidents to maintainers, supports severity and resolution tracking, and optionally provides AI-generated investigation clues.
-- **Why it matters:** Helps engineers investigate with relevant context and makes recurring fixes easier to find and hand over.
-- **Reported impact:** Diagnostics response time decreased by 90%; this is not total incident resolution time, and measurement details are limited.
-- **Tools:** Google Apps Script · UiPath Orchestrator · Google Sheets · Google Chat · Gemini
+* **What it does:** Captures failure webhooks, routes incidents to designated owners, sends actionable alerts, and logs outcomes in a searchable history.
+* **Why it matters:** Eliminates ownership ambiguity and fragmented alerts to accelerate human investigation.
+* **Design contribution:** Designed the end-to-end event-to-owner flow, integrated optional AI diagnostic insights, and iterated based on team feedback.
+* **Tools:** Google Apps Script · UiPath Orchestrator · Google Sheets · Google Chat · Gemini
 
 ## Additional project
 
