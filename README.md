@@ -34,6 +34,18 @@ Replaced a fragmented failure-notification handoff with clearer ownership, respo
 * **Tools:** Google Apps Script · UiPath Orchestrator · Google Sheets · Google Chat · Gemini
 
 ## Additional project
+### 📦 [Supply Chain Risk War Room](https://github.com/fangyiiwu/SCM-QCDS-Supply-Chain-Risk-War-Room)
+
+An independent portfolio project exploring how purchasing and equipment signals can support supply chain exception review.
+
+- **What it does:** Combines synthetic purchase-order and machine-event data, applies transparent rule-based risk scoring, and presents supplier and exception views in Power BI.
+- **Why it matters:** Demonstrates how Quality, Cost, Delivery, and Service (QCDS) signals can provide a shared starting point for prioritizing supplier follow-up.
+- **Design contribution:** Built the synthetic data pipeline and scoring logic, and designed a dashboard to support human review rather than automated decisions.
+- **Project context:** Created independently using synthetic data; not a production system or a representation of any company's actual operations.
+- **Tools:** Python · pandas · NumPy · Power BI
+
+**[View the Power BI report (PDF)](https://github.com/fangyiiwu/SCM-QCDS-Supply-Chain-Risk-War-Room/blob/main/powerbi/Portfolio_Supply_Chain_Risk_War_Room_PowerBI.pdf)**
+
 
 ### 📊 [Offline Excel/VBA Workflow for Onboarding & Compliance Records](https://github.com/fangyiiwu/RPA-side-project/tree/main/VBA)
 
