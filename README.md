@@ -44,8 +44,7 @@ An independent portfolio project exploring how purchasing and equipment signals 
 - **Project context:** Created independently using synthetic data; not a production system or a representation of any company's actual operations.
 - **Tools:** Python · pandas · NumPy · Power BI
 
-**[View the Power BI report (PDF)](https://github.com/fangyiiwu/SCM-QCDS-Supply-Chain-Risk-War-Room/blob/main/powerbi/Portfolio_Supply_Chain_Risk_War_Room_PowerBI.pdf)**
-
+**[View the Power BI report (PDF)](https://fangyiiwu.github.io/SCM-QCDS-Supply-Chain-Risk-War-Room/powerbi/Portfolio_Supply_Chain_Risk_War_Room_PowerBI.pdf)**
 
 ### 📊 [Offline Excel/VBA Workflow for Onboarding & Compliance Records](https://github.com/fangyiiwu/RPA-side-project/tree/main/VBA)
 
